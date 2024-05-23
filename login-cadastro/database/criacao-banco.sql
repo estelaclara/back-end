@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS User(
 username varchar(50) primary key, 
 password varchar(10) NOT NULL);
 
-INSERT INTO user values ('may', 'admin123');
+INSERT INTO user values ('estela', 'estela2802');
