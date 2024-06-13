@@ -45,13 +45,13 @@ app.post('/login', (req, res) => {
             if (results.length > 0) {
                 const passwordBD = results[0].password;
                 if (passwordBD === password) {
-                    console.log('login bem sucedido!!')
+                    console.log('Login bem sucedido!!')
 
                 } else {
-                    console.log('credenciais inválidas')
+                    console.log('Credenciais inválidas')
                 }
             } else {
-                console.log('usuario não cadastrado')
+                console.log('Usuário não cadastrado')
             }
         }
     })
@@ -73,7 +73,7 @@ app.post("/cadastro", (req, res)=>{
     const confpassword = req.body.nvsenhaConfirm
 
     if (password === confpassword){
-        console.log('chegou aqui')
+        console.log('Chegou aqui')
 
         db.query('insert into usuario (nome, email, password) values (?,?,?);', [name, email, password], (error, results)=>{ 
             if (error){
